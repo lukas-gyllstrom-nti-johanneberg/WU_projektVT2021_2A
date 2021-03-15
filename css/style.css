@@ -8,7 +8,7 @@
 
 .gridwrapper{
     display: grid;
-    height: 100vh;
+    height: 1100px;
     width: 100vw;
     grid-template-areas: 
     "na he"
@@ -16,7 +16,7 @@
     "fo fo"
     ;
     grid-template-columns: 100px 1fr;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px auto 100px;
 }
 
 header{
@@ -25,7 +25,7 @@ header{
     justify-content: space-around;
     align-items: center;
     grid-area: he;
-    background: grey;
+    background: brown;
 }
 
 header h1{
@@ -169,16 +169,172 @@ footer ul li a:hover{
     font-weight: bold;
 }
 
+aside{
+    visibility: hidden;
+    position: absolute;
+    grid-area: as;
+}
+
 /* Det som kommer här är specifikt för index.html */
+
+.main_index{
+    height: 630px;
+    display: grid;
+    grid-template-areas: 
+    "oo"
+    "kt"
+    "ka"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: 250px 150px 230px;
+}
+
+.omoss-section{
+    grid-area: oo;
+    border: solid black;
+    margin: 5px;
+}
 
 .omoss-section div{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.omoss-section div article{
+    height: 180px;
 }
 
 .omoss-section h2{
     display: flex;
     justify-content: space-evenly;
+    font-size: 30px;
+}
+
+.vår_historia-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: dashed;
+    border-radius: 10px;
+    width: 30%;
+    background: lightcyan;
+}
+
+.vår_historia-article h3{
+    padding: 10px;
+    font-size: 22px;
+    margin-top: 0px;
+}
+
+.vår_historia-article p{
+    padding: 5px;
+    font-size: 14px;
+    margin-top: -18px;
+}
+
+.styrelse-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: dashed;
+    border-radius: 10px;
+    width: 30%;
+    background: lightcyan;
+}
+
+.styrelse-article h3{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.styrelse-lista{
+    margin: 10px;
+    padding: 10px;
+    margin-top: -18px;
+}
+
+.meriter-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: dashed;
+    border-radius: 10px;
+    width: 30%;
+    background: lightcyan;
+}
+
+.meriter-article h3{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.meriter-article ul{
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: -18px;
+}
+
+.meriter-article ul li{
+    font-size: 14px;
+}
+
+.mer{
+    list-style-type: none;
+}
+
+.kommandetävlingar-section{
+    grid-area: kt;
+    border: solid black;
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kommandetävlingar-section h2{
+    font-size: 30px;
+}
+
+.kommandetävlingar-section ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+}
+
+.kommandetävlingar-section ul li{
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.kalender-section{
+    grid-area: ka;
+    border: solid black;
+    margin: 5px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kalender-section div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kalender-section h2{
+    font-size: 30px;
+}
+
+.kalender-lista1{
+    margin-left: 3vw;
+}
+
+.kalender-lista2{
+    margin-right: 30vw;
 }
 
 /* Det som kommer här är specifikt för om_oss.html */
@@ -205,8 +361,8 @@ footer ul li a:hover{
     "ma"
     "fo"
     ;
-    grid-template-columns: 100vw;
-    grid-template-rows: 100px 85px 1fr 100px;
+    grid-template-columns: 1206px;
+    grid-template-rows: 100px 85px auto 100px;
 }
 
 header h1{
@@ -220,7 +376,7 @@ header h1{
 .navigation{
     height: 85px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     position: static;
     flex-direction: row;
 }
@@ -236,6 +392,7 @@ header h1{
 footer ul{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .l4{
@@ -250,4 +407,23 @@ footer ul li{
     margin-left: 0px;
     margin-top: 40px;
 }
+
+aside{
+    visibility: visible;
+    position: static;
+}
+
+/* Det som kommer här är specifikt för index.html på desktop */
+
+.main_index{
+    height: 600px;
+    display: grid;
+    grid-template-areas: 
+    "oo kt as"
+    "ka ka as"
+    ;
+    grid-template-columns: 40vw 40vw 1fr;
+    grid-template-rows: 350px 250px;
+}
+
 }
